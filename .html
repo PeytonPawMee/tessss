@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wheelys Booking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Wheelys</h1>
+<p>Fast, Reliable Ride Booking</p>
+</header>
+
+<section class="booking">
+
+<h2>Book a Ride</h2>
+
+<form id="bookingForm">
+
+<label>Name</label>
+<input type="text" id="name" required>
+
+<label>Email</label>
+<input type="email" id="email" required>
+
+<label>Pickup Location</label>
+<input type="text" id="pickup" required>
+
+<label>Drop-off Location</label>
+<input type="text" id="dropoff" required>
+
+<label>Date</label>
+<input type="date" id="date" required>
+
+<label>Vehicle Type</label>
+<select id="vehicle">
+<option>Standard Car</option>
+<option>Van</option>
+<option>Luxury Car</option>
+</select>
+
+<button type="submit">Book Ride</button>
+
+</form>
+
+<p id="confirmation"></p>
+
+</section>
+
+<footer>
+<p>© 2026 Wheelys</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

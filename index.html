@@ -1,8 +1,4 @@
 
-Peyton Anderson <231893@lhisd.net>
-9:17 AM (0 minutes ago)
-to me
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +11,7 @@ to me
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
+/* GENERAL */
 *{
 margin:0;
 padding:0;
@@ -34,6 +30,7 @@ from{opacity:0;}
 to{opacity:1;}
 }
 
+/* HEADER */
 header{
 display:flex;
 justify-content:space-between;
@@ -61,6 +58,7 @@ nav a:hover{
 color:#0f766e;
 }
 
+/* HERO */
 .hero{
 display:flex;
 align-items:center;
@@ -93,27 +91,16 @@ animation:slideRight 1.2s ease;
 }
 
 @keyframes slideUp{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1; transform:translateY(0);}
 }
 
 @keyframes slideRight{
-from{
-opacity:0;
-transform:translateX(40px);
-}
-to{
-opacity:1;
-transform:translateX(0);
-}
+from{opacity:0; transform:translateX(40px);}
+to{opacity:1; transform:translateX(0);}
 }
 
+/* BUTTON */
 .btn{
 background:#0f766e;
 color:white;
@@ -129,6 +116,7 @@ transform:scale(1.05);
 background:#115e59;
 }
 
+/* SECTIONS */
 .section{
 padding:70px 8%;
 }
@@ -142,6 +130,7 @@ margin-bottom:40px;
 font-size:32px;
 }
 
+/* FEATURES */
 .features{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -160,6 +149,7 @@ transition:0.3s;
 transform:translateY(-6px);
 }
 
+/* CARDS */
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -201,6 +191,7 @@ font-weight:600;
 margin-top:8px;
 }
 
+/* BOOKING FORM */
 .booking{
 background:#ffffff;
 padding:40px;
@@ -238,6 +229,7 @@ transform:scale(1.05);
 background:#115e59;
 }
 
+/* FOOTER */
 footer{
 background:#111827;
 color:white;
@@ -247,7 +239,6 @@ margin-top:60px;
 }
 
 @media(max-width:900px){
-
 .hero{
 flex-direction:column;
 text-align:center;
@@ -256,7 +247,6 @@ text-align:center;
 .hero img{
 width:100%;
 }
-
 }
 
 </style>
@@ -265,80 +255,46 @@ width:100%;
 <body>
 
 <header>
-
 <div class="logo">Wheelys</div>
-
 <nav>
 <a href="#features">Features</a>
 <a href="#rentals">Wheelchairs</a>
 <a href="#booking">Book</a>
 </nav>
-
 </header>
 
-
 <section class="hero">
-
 <div class="hero-text">
-
 <h1>Reliable Wheelchair Rentals</h1>
-
-<p>
-Affordable mobility solutions for travel, recovery, and everyday life.
-</p>
-
+<p>Affordable mobility solutions for travel, recovery, and everyday life.</p>
 <a class="btn" href="#booking">Reserve Now</a>
-
 </div>
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Wheelchair.jpg">
-
+<!-- Use your local hero image -->
+<img src="images/hero.jpg" alt="Wheelchair Hero Image">
 </section>
 
-
 <section id="features" class="section">
-
 <div class="section-title">
 <h2>Why Choose Wheelys</h2>
 </div>
 
 <div class="features">
-
-<div class="feature">
-<h3>Fast Booking</h3>
-<p>Reserve a wheelchair online in under a minute.</p>
+<div class="feature"><h3>Fast Booking</h3><p>Reserve a wheelchair online in under a minute.</p></div>
+<div class="feature"><h3>Affordable Rentals</h3><p>Flexible daily and weekly pricing.</p></div>
+<div class="feature"><h3>Reliable Equipment</h3><p>Clean, safe, professionally maintained equipment.</p></div>
+<div class="feature"><h3>Flexible Pickup</h3><p>Pickup or delivery options available.</p></div>
 </div>
-
-<div class="feature">
-<h3>Affordable Rentals</h3>
-<p>Flexible daily and weekly rental pricing.</p>
-</div>
-
-<div class="feature">
-<h3>Reliable Equipment</h3>
-<p>Clean, safe, professionally maintained equipment.</p>
-</div>
-
-<div class="feature">
-<h3>Flexible Pickup</h3>
-<p>Pickup or delivery options available.</p>
-</div>
-
-</div>
-
 </section>
 
-
 <section id="rentals" class="section">
-
 <div class="section-title">
 <h2>Wheelchair Options</h2>
 </div>
 
 <div class="cards">
-
 <div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Manual_wheelchair.jpg">
+<img src="images/standard-wheelchair.jpg" alt="Standard Wheelchair">
 <div class="card-body">
 <h3>Standard Wheelchair</h3>
 <p>Durable manual wheelchair.</p>
@@ -347,7 +303,7 @@ Affordable mobility solutions for travel, recovery, and everyday life.
 </div>
 
 <div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Lightweight_wheelchair.jpg">
+<img src="images/lightweight-wheelchair.jpg" alt="Lightweight Wheelchair">
 <div class="card-body">
 <h3>Lightweight Wheelchair</h3>
 <p>Portable and travel friendly.</p>
@@ -356,95 +312,60 @@ Affordable mobility solutions for travel, recovery, and everyday life.
 </div>
 
 <div class="card">
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Electric_wheelchair.jpg">
+<img src="images/electric-wheelchair.jpg" alt="Electric Wheelchair">
 <div class="card-body">
 <h3>Electric Wheelchair</h3>
 <p>Powered mobility.</p>
 <div class="price">$45 / day</div>
 </div>
 </div>
-
 </div>
-
 </section>
 
-
 <section id="booking">
-
 <div class="booking">
-
 <h2 style="text-align:center;margin-bottom:15px;">Reserve a Wheelchair</h2>
-
 <form id="bookingForm">
-
 <input type="text" placeholder="Full Name" required>
-
 <input type="email" placeholder="Email Address" required>
-
 <input type="date" required>
-
 <select>
 <option>Standard Wheelchair</option>
 <option>Lightweight Wheelchair</option>
 <option>Electric Wheelchair</option>
 </select>
-
 <button type="submit">Reserve Wheelchair</button>
-
 </form>
-
 <p id="confirmation" style="margin-top:10px;color:green;"></p>
-
 </div>
-
 </section>
 
-
 <footer>
-
 <p>© 2026 Wheelys Wheelchair Rentals</p>
-
 </footer>
 
-
 <script>
-
-/* booking confirmation */
-
+// Booking confirmation
 document.getElementById("bookingForm").addEventListener("submit",function(e){
-
 e.preventDefault();
-
 document.getElementById("confirmation").innerText =
 "Reservation request submitted successfully.";
-
 });
 
-
-/* scroll animation */
-
+// Animate cards on scroll
 const cards = document.querySelectorAll(".card");
-
 window.addEventListener("scroll",()=>{
-
 const trigger = window.innerHeight * 0.85;
-
 cards.forEach(card=>{
-
 const top = card.getBoundingClientRect().top;
-
-if(top < trigger){
-card.classList.add("show");
-}
-
+if(top < trigger){ card.classList.add("show"); }
 });
-
 });
-
 </script>
 
 </body>
 </html>
+
 
 
 

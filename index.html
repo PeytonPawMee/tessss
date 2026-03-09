@@ -1,3 +1,8 @@
+
+Peyton Anderson <231893@lhisd.net>
+9:17 AM (0 minutes ago)
+to me
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,84 +26,141 @@ font-family:'Inter',sans-serif;
 body{
 background:#f8fafc;
 color:#1f2937;
+animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
 }
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
+padding:18px 8%;
 background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
 }
 
 .logo{
-font-size:22px;
 font-weight:700;
+font-size:22px;
 color:#0f766e;
 }
 
 nav a{
-margin-left:25px;
+margin-left:22px;
 text-decoration:none;
 color:#374151;
 font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#0f766e;
 }
 
 .hero{
-padding:120px 8%;
 display:flex;
 align-items:center;
 justify-content:space-between;
+padding:80px 8%;
 background:linear-gradient(135deg,#ecfeff,#f0fdf4);
+gap:40px;
 }
 
 .hero-text{
-max-width:500px;
+max-width:520px;
+animation:slideUp 1s ease;
 }
 
 .hero-text h1{
-font-size:48px;
+font-size:42px;
 margin-bottom:15px;
 }
 
 .hero-text p{
+color:#4b5563;
 font-size:18px;
 margin-bottom:25px;
-color:#4b5563;
-}
-
-.btn{
-background:#0f766e;
-color:white;
-padding:14px 24px;
-border-radius:8px;
-text-decoration:none;
-font-weight:600;
 }
 
 .hero img{
 width:420px;
 border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
+animation:slideRight 1.2s ease;
+}
+
+@keyframes slideUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes slideRight{
+from{
+opacity:0;
+transform:translateX(40px);
+}
+to{
+opacity:1;
+transform:translateX(0);
+}
+}
+
+.btn{
+background:#0f766e;
+color:white;
+padding:14px 26px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+background:#115e59;
 }
 
 .section{
-padding:80px 8%;
+padding:70px 8%;
+}
+
+.section-title{
 text-align:center;
+margin-bottom:40px;
 }
 
-.section h2{
-font-size:34px;
-margin-bottom:10px;
+.section-title h2{
+font-size:32px;
 }
 
-.section p{
-color:#6b7280;
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.feature{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 6px 15px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.feature:hover{
+transform:translateY(-6px);
 }
 
 .cards{
-margin-top:50px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
@@ -106,14 +168,21 @@ gap:30px;
 
 .card{
 background:white;
-border-radius:12px;
+border-radius:10px;
 overflow:hidden;
-box-shadow:0 8px 20px rgba(0,0,0,0.05);
-transition:0.3s;
+box-shadow:0 8px 18px rgba(0,0,0,0.06);
+transition:0.4s;
+opacity:0;
+transform:translateY(40px);
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0);
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .card img{
@@ -123,20 +192,22 @@ object-fit:cover;
 }
 
 .card-body{
-padding:20px;
+padding:18px;
 }
 
-.card-body h3{
-margin-bottom:10px;
+.price{
+color:#0f766e;
+font-weight:600;
+margin-top:8px;
 }
 
 .booking{
-background:white;
-padding:60px;
+background:#ffffff;
+padding:40px;
 border-radius:12px;
-max-width:500px;
-margin:40px auto;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+max-width:450px;
+margin:50px auto;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
 
 form{
@@ -152,7 +223,6 @@ border:1px solid #d1d5db;
 }
 
 button{
-margin-top:10px;
 padding:14px;
 background:#0f766e;
 color:white;
@@ -160,18 +230,20 @@ border:none;
 border-radius:8px;
 font-weight:600;
 cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
+transform:scale(1.05);
 background:#115e59;
 }
 
 footer{
-text-align:center;
-padding:30px;
-margin-top:60px;
 background:#111827;
 color:white;
+text-align:center;
+padding:25px;
+margin-top:60px;
 }
 
 @media(max-width:900px){
@@ -182,7 +254,6 @@ text-align:center;
 }
 
 .hero img{
-margin-top:30px;
 width:100%;
 }
 
@@ -198,10 +269,9 @@ width:100%;
 <div class="logo">Wheelys</div>
 
 <nav>
-<a href="#about">About</a>
+<a href="#features">Features</a>
 <a href="#rentals">Wheelchairs</a>
 <a href="#booking">Book</a>
-<a href="#contact">Contact</a>
 </nav>
 
 </header>
@@ -211,81 +281,87 @@ width:100%;
 
 <div class="hero-text">
 
-<h1>Wheelchair Rentals Made Easy</h1>
+<h1>Reliable Wheelchair Rentals</h1>
 
 <p>
-Affordable, reliable wheelchair rentals for travel, recovery, and
-daily mobility needs.
+Affordable mobility solutions for travel, recovery, and everyday life.
 </p>
 
-<a class="btn" href="#booking">Book Now</a>
+<a class="btn" href="#booking">Reserve Now</a>
 
 </div>
 
-<img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Wheelchair.jpg">
 
 </section>
 
 
-<section id="about" class="section">
+<section id="features" class="section">
 
-<h2>About Wheelys</h2>
+<div class="section-title">
+<h2>Why Choose Wheelys</h2>
+</div>
 
-<p>
-Wheelys helps people stay mobile with easy and reliable wheelchair
-rentals. Whether recovering from surgery or traveling, we make
-mobility simple and accessible.
-</p>
+<div class="features">
+
+<div class="feature">
+<h3>Fast Booking</h3>
+<p>Reserve a wheelchair online in under a minute.</p>
+</div>
+
+<div class="feature">
+<h3>Affordable Rentals</h3>
+<p>Flexible daily and weekly rental pricing.</p>
+</div>
+
+<div class="feature">
+<h3>Reliable Equipment</h3>
+<p>Clean, safe, professionally maintained equipment.</p>
+</div>
+
+<div class="feature">
+<h3>Flexible Pickup</h3>
+<p>Pickup or delivery options available.</p>
+</div>
+
+</div>
 
 </section>
 
 
 <section id="rentals" class="section">
 
+<div class="section-title">
 <h2>Wheelchair Options</h2>
+</div>
 
 <div class="cards">
 
 <div class="card">
-
-<img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e">
-
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Manual_wheelchair.jpg">
 <div class="card-body">
-
 <h3>Standard Wheelchair</h3>
-
-<p>Comfortable and durable for everyday use.</p>
-
+<p>Durable manual wheelchair.</p>
+<div class="price">$15 / day</div>
 </div>
-
 </div>
 
 <div class="card">
-
-<img src="https://images.unsplash.com/photo-1580281658629-7b4a0cfd9a98">
-
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Lightweight_wheelchair.jpg">
 <div class="card-body">
-
 <h3>Lightweight Wheelchair</h3>
-
-<p>Portable and easy to transport.</p>
-
+<p>Portable and travel friendly.</p>
+<div class="price">$20 / day</div>
 </div>
-
 </div>
 
 <div class="card">
-
-<img src="https://images.unsplash.com/photo-1588776814546-ec7e0f1d9c3d">
-
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Electric_wheelchair.jpg">
 <div class="card-body">
-
 <h3>Electric Wheelchair</h3>
-
-<p>Powered mobility with smooth controls.</p>
-
+<p>Powered mobility.</p>
+<div class="price">$45 / day</div>
 </div>
-
 </div>
 
 </div>
@@ -293,11 +369,11 @@ mobility simple and accessible.
 </section>
 
 
-<section id="booking" class="section">
-
-<h2>Reserve a Wheelchair</h2>
+<section id="booking">
 
 <div class="booking">
+
+<h2 style="text-align:center;margin-bottom:15px;">Reserve a Wheelchair</h2>
 
 <form id="bookingForm">
 
@@ -317,20 +393,9 @@ mobility simple and accessible.
 
 </form>
 
-<p id="confirmation"></p>
+<p id="confirmation" style="margin-top:10px;color:green;"></p>
 
 </div>
-
-</section>
-
-
-<section id="contact" class="section">
-
-<h2>Contact Us</h2>
-
-<p>Email: info@wheelys.com</p>
-
-<p>Phone: (555) 123-4567</p>
 
 </section>
 
@@ -344,12 +409,35 @@ mobility simple and accessible.
 
 <script>
 
+/* booking confirmation */
+
 document.getElementById("bookingForm").addEventListener("submit",function(e){
 
 e.preventDefault();
 
 document.getElementById("confirmation").innerText =
-"Your reservation request has been submitted!";
+"Reservation request submitted successfully.";
+
+});
+
+
+/* scroll animation */
+
+const cards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll",()=>{
+
+const trigger = window.innerHeight * 0.85;
+
+cards.forEach(card=>{
+
+const top = card.getBoundingClientRect().top;
+
+if(top < trigger){
+card.classList.add("show");
+}
+
+});
 
 });
 
@@ -357,3 +445,6 @@ document.getElementById("confirmation").innerText =
 
 </body>
 </html>
+
+
+

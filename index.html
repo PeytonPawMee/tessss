@@ -1,59 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<title>Wheelys Booking</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wheelys | Wheelchair Rentals</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:#f8fafc;
+color:#1f2937;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+color:#0f766e;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#374151;
+font-weight:500;
+}
+
+.hero{
+padding:120px 8%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:linear-gradient(135deg,#ecfeff,#f0fdf4);
+}
+
+.hero-text{
+max-width:500px;
+}
+
+.hero-text h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero-text p{
+font-size:18px;
+margin-bottom:25px;
+color:#4b5563;
+}
+
+.btn{
+background:#0f766e;
+color:white;
+padding:14px 24px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+}
+
+.hero img{
+width:420px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.section{
+padding:80px 8%;
+text-align:center;
+}
+
+.section h2{
+font-size:34px;
+margin-bottom:10px;
+}
+
+.section p{
+color:#6b7280;
+}
+
+.cards{
+margin-top:50px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-body{
+padding:20px;
+}
+
+.card-body h3{
+margin-bottom:10px;
+}
+
+.booking{
+background:white;
+padding:60px;
+border-radius:12px;
+max-width:500px;
+margin:40px auto;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+form{
+display:flex;
+flex-direction:column;
+}
+
+input,select{
+padding:12px;
+margin:8px 0;
+border-radius:6px;
+border:1px solid #d1d5db;
+}
+
+button{
+margin-top:10px;
+padding:14px;
+background:#0f766e;
+color:white;
+border:none;
+border-radius:8px;
+font-weight:600;
+cursor:pointer;
+}
+
+button:hover{
+background:#115e59;
+}
+
+footer{
+text-align:center;
+padding:30px;
+margin-top:60px;
+background:#111827;
+color:white;
+}
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero img{
+margin-top:30px;
+width:100%;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-<h1>Wheelys</h1>
-<p>Fast, Reliable Ride Booking</p>
+
+<div class="logo">Wheelys</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#rentals">Wheelchairs</a>
+<a href="#booking">Book</a>
+<a href="#contact">Contact</a>
+</nav>
+
 </header>
 
-<section class="booking">
 
-<h2>Book a Ride</h2>
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>Wheelchair Rentals Made Easy</h1>
+
+<p>
+Affordable, reliable wheelchair rentals for travel, recovery, and
+daily mobility needs.
+</p>
+
+<a class="btn" href="#booking">Book Now</a>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d">
+
+</section>
+
+
+<section id="about" class="section">
+
+<h2>About Wheelys</h2>
+
+<p>
+Wheelys helps people stay mobile with easy and reliable wheelchair
+rentals. Whether recovering from surgery or traveling, we make
+mobility simple and accessible.
+</p>
+
+</section>
+
+
+<section id="rentals" class="section">
+
+<h2>Wheelchair Options</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1599058917765-a780eda07a3e">
+
+<div class="card-body">
+
+<h3>Standard Wheelchair</h3>
+
+<p>Comfortable and durable for everyday use.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1580281658629-7b4a0cfd9a98">
+
+<div class="card-body">
+
+<h3>Lightweight Wheelchair</h3>
+
+<p>Portable and easy to transport.</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1588776814546-ec7e0f1d9c3d">
+
+<div class="card-body">
+
+<h3>Electric Wheelchair</h3>
+
+<p>Powered mobility with smooth controls.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="booking" class="section">
+
+<h2>Reserve a Wheelchair</h2>
+
+<div class="booking">
 
 <form id="bookingForm">
 
-<label>Name</label>
-<input type="text" id="name" required>
+<input type="text" placeholder="Full Name" required>
 
-<label>Email</label>
-<input type="email" id="email" required>
+<input type="email" placeholder="Email Address" required>
 
-<label>Pickup Location</label>
-<input type="text" id="pickup" required>
+<input type="date" required>
 
-<label>Drop-off Location</label>
-<input type="text" id="dropoff" required>
-
-<label>Date</label>
-<input type="date" id="date" required>
-
-<label>Vehicle Type</label>
-<select id="vehicle">
-<option>Standard Car</option>
-<option>Van</option>
-<option>Luxury Car</option>
+<select>
+<option>Standard Wheelchair</option>
+<option>Lightweight Wheelchair</option>
+<option>Electric Wheelchair</option>
 </select>
 
-<button type="submit">Book Ride</button>
+<button type="submit">Reserve Wheelchair</button>
 
 </form>
 
 <p id="confirmation"></p>
 
+</div>
+
 </section>
 
+
+<section id="contact" class="section">
+
+<h2>Contact Us</h2>
+
+<p>Email: info@wheelys.com</p>
+
+<p>Phone: (555) 123-4567</p>
+
+</section>
+
+
 <footer>
-<p>© 2026 Wheelys</p>
+
+<p>© 2026 Wheelys Wheelchair Rentals</p>
+
 </footer>
 
-<script src="script.js"></script>
+
+<script>
+
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+document.getElementById("confirmation").innerText =
+"Your reservation request has been submitted!";
+
+});
+
+</script>
 
 </body>
 </html>
